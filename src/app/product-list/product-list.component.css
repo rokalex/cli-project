@@ -1,7 +1,12 @@
-#searchIcon{
+/*#searchIcon{
   color: inherit;
 }
 
 nav{
   box-shadow: inherit;
+}*/
+
+nav form {
+    width: 50%;
+    float: right;
 }
