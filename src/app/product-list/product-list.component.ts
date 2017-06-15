@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products :any[] = [
+  products :IProduct[] = [
       {
           "id": 1,
           "productName": "Leaf Rake",
@@ -60,7 +60,30 @@ export class ProductListComponent implements OnInit {
   ]
   constructor() { }
 
-  ngOnInit() {
+  public displayImg = true;
+  public listfilter : string = 'cart';
+
+  myPublicMethod(){
+    this.displayImg = !this.displayImg;
+    //toogle le booléen
   }
 
+
+
+
+  ngOnInit() {
+    console.log('toto')
+  }
+
+}
+//ne jamais mettre une interface dans une classe
+export interface IProduct{
+  id: number;
+  productName: string;
+  productCode: string;
+  releaseDate: string;
+  description: string;
+  price: number;
+  starRating: number;
+  imageUrl: string;
 }
